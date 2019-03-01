@@ -1,5 +1,4 @@
 class Api::UsersController < ApplicationController
-  class Api::UsersController < ApplicationController
     def create
       user = User.new(
                       name: params[:name],
@@ -14,5 +13,4 @@ class Api::UsersController < ApplicationController
         render json: {errors: user.errors.full_messages}, status: :bad_request
       end
     end
-  end
 end
